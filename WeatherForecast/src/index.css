@@ -1,1 +1,36 @@
-
+.sunny-bg {
+    background: linear-gradient(to right, #fceabb, #f8b500);
+  }
+  
+  .cloudy-bg {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+  }
+  
+  .rainy-bg {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+  }
+  
+  .snowy-bg {
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+  }
+  
+  .stormy-bg {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  }
+  
+  .foggy-bg {
+    background: linear-gradient(to right, #757f9a, #d7dde8);
+  }
+  
+  .default-bg {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+  }
+  
+  /* You can also add padding or full height */
+  .container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
