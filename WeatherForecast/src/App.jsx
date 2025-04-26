@@ -1,6 +1,6 @@
 import React from 'react'
 import WeatherApp from './components/WeatherApp'
-import './App.css'
+// import './App.css'
 
 function App() {
 
