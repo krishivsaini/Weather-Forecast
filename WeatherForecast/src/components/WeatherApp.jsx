@@ -64,10 +64,59 @@ function WeatherApp() {
             search()
         }
     }
-    
-    
+    const getWeatherIcon = () => {
+        if (!data.weather) return '';
+      
+        const weatherType = data.weather[0].main;
+      
+        switch (weatherType) {
+          case 'Clouds':
+            return 'fa-cloud';
+          case 'Rain':
+            return 'fa-cloud-showers-heavy';
+          case 'Clear':
+            return 'fa-sun';
+          case 'Snow':
+            return 'fa-snowflake';
+          case 'Thunderstorm':
+            return 'fa-bolt';
+          case 'Drizzle':
+            return 'fa-cloud-rain';
+          case 'Mist':
+          case 'Smoke':
+          case 'Haze':
+          case 'Fog':
+            return 'fa-smog';
+          default:
+            return 'fa-sun'; // default icon
+        }
+    };
+    const getBackgroundClass = () => {
+        if (!data.weather) return 'default';
+      
+        const weatherType = data.weather[0].main;
+      
+        switch (weatherType) {
+          case 'Clouds':
+            return 'cloudy-bg';
+          case 'Rain':
+            return 'rainy-bg';
+          case 'Clear':
+            return 'sunny-bg';
+          case 'Snow':
+            return 'snowy-bg';
+          case 'Thunderstorm':
+            return 'stormy-bg';
+          case 'Mist':
+          case 'Fog':
+            return 'foggy-bg';
+          default:
+            return 'default-bg';
+        }
+    };
+      
   return (
-    <div className='container'>
+    <div className={`container ${getBackgroundClass()}`}>
         <div className='weather-app'>
             <div className='search'>
                 <div className='search-top'>
@@ -86,7 +135,7 @@ function WeatherApp() {
                 </div>
             </div>
             <div className='weather'>
-                {/* <img src={sunny} alt="weather" /> */}
+                <i className={`fa-solid ${getWeatherIcon()}`}></i>
                 <div className='weather-type'>
                     {data.weather ? data.weather[0].main : null}
                 </div>
