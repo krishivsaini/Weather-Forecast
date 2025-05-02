@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './Weather.css'
 function WeatherApp() {
     const [data, setData] = useState({})
     const [Location, setLocation] = useState('')
