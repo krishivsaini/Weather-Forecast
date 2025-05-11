@@ -11,7 +11,7 @@ function WeatherApp() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTime(new Date());
-    }, 1000); // update every second
+    }, 1000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -88,7 +88,7 @@ function WeatherApp() {
       case "Fog":
         return "fa-smog";
       default:
-        return "fa-sun"; // default icon
+        return "fa-sun"; 
     }
   };
   const getBackgroundClass = () => {
