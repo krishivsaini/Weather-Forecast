@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Weather.css";
 function WeatherApp() {
   const [data, setData] = useState({});
@@ -121,9 +122,7 @@ function WeatherApp() {
         <div className="nav-logo">WeatherApp</div>
         <ul className="nav-links">
           <li>
-            <Link to="/" className="nav-item">
-              Home
-            </Link>
+            Home
           </li>
           <li>
             <Link to="/about" className="nav-item">
