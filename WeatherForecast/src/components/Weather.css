@@ -188,3 +188,11 @@
   margin-top: 10px;
   font-size: 14px;
 }
+.nav-item {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}

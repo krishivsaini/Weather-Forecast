@@ -11,7 +11,7 @@ function WeatherApp() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTime(new Date());
-    }, 1000); 
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -88,7 +88,7 @@ function WeatherApp() {
       case "Fog":
         return "fa-smog";
       default:
-        return "fa-sun"; 
+        return "fa-sun";
     }
   };
   const getBackgroundClass = () => {
@@ -120,9 +120,21 @@ function WeatherApp() {
       <nav className="navbar">
         <div className="nav-logo">WeatherApp</div>
         <ul className="nav-links">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <Link to="/" className="nav-item">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="nav-item">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="nav-item">
+              Contact
+            </Link>
+          </li>
         </ul>
       </nav>
       <div className={`container ${getBackgroundClass()}`}>
