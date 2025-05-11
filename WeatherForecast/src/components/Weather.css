@@ -1,104 +1,104 @@
 /* Base container */
 .container {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: background 0.5s ease;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background 0.5s ease;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .weather-app {
-    background-color: rgba(0, 0, 0, 0.4);
-    /* backdrop-filter: blur(10px); */
-    padding: 30px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
+  /* backdrop-filter: blur(10px); */
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 .search {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-  
+
 .search-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
-  
+
 .search-top i {
-    margin-right: 6px;
+  margin-right: 6px;
 }
-  
+
 .search-bar {
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 5px 10px;
 }
-  
+
 .search-bar input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 1rem;
-    padding: 8px;
-    outline: none;
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 8px;
+  outline: none;
 }
-  
+
 .search-bar i {
-    cursor: pointer;
-    color: white;
+  cursor: pointer;
+  color: white;
 }
-  
-  /* Weather display */
+
+/* Weather display */
 .weather {
   margin-top: 10px;
 }
-  
+
 .weather i {
-    font-size: 60px;
-    margin-bottom: 10px;
+  font-size: 60px;
+  margin-bottom: 10px;
 }
-  
+
 .weather-type {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-    font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 .temp {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #ffcc70; /* Light warm yellow */
-    margin-top: 5px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffcc70; /* Light warm yellow */
+  margin-top: 5px;
 }
-  
+
 .weather-date {
-    margin: 20px 0;
-    font-size: 1rem;
-    opacity: 0.9;
+  margin: 20px 0;
+  font-size: 1rem;
+  opacity: 0.9;
 }
-  
+
 .weather-date p:last-child {
-    font-weight: bold;
-    margin-top: 5px;
+  font-weight: bold;
+  margin-top: 5px;
 }
 .weather-data {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
 }
-  
+
 .weather-data .humidity,
 .weather-data .wind {
   flex: 1;
@@ -109,16 +109,16 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
-  
+
 .data-name {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    color: #ffffff;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #ffffff;
 }
 .data {
-    font-size: 1.2rem;
-    color: #add8e6; /* light blue */
-    margin-top: 5px;
+  font-size: 1.2rem;
+  color: #add8e6; /* light blue */
+  margin-top: 5px;
 }
 .humidity i,
 .wind i {
@@ -127,31 +127,65 @@
   color: #ffffff;
 }
 .sunny-bg {
-    background: linear-gradient(to right, #fceabb, #f8b500);
+  background: linear-gradient(to right, #fceabb, #f8b500);
 }
-  
+
 .cloudy-bg {
-    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
 }
-  
+
 .rainy-bg {
-    background: linear-gradient(to right, #4b79a1, #283e51);
+  background: linear-gradient(to right, #4b79a1, #283e51);
 }
-  
+
 .snowy-bg {
-    background: linear-gradient(to right, #e6dada, #274046);
+  background: linear-gradient(to right, #e6dada, #274046);
 }
-  
+
 .stormy-bg {
-    background: linear-gradient(to right, #232526, #414345);
+  background: linear-gradient(to right, #232526, #414345);
 }
-  
+
 .foggy-bg {
-    background: linear-gradient(to right, #757f9a, #d7dde8);
+  background: linear-gradient(to right, #757f9a, #d7dde8);
 }
-  
+
 .default-bg {
-    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+  background: linear-gradient(to bottom, #1e3c72, #2a5298);
 }
-  
-  
+.navbar {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links li:hover {
+  color: #ccc;
+}
+.footer {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
