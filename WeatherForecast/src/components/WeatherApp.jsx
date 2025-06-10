@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Weather.css";
+import "./Auth.css";
 function WeatherApp() {
   const [data, setData] = useState({});
   const [Location, setLocation] = useState("");
   const [currentTime, setCurrentTime] = useState(new Date());
   const Api_Key = "4c7e3f5aa7b54a209ae46a3b61a082ac";
+  const navigate = useNavigate();
   const handleInputChange = (e) => {
     setLocation(e.target.value);
   };
@@ -115,27 +117,37 @@ function WeatherApp() {
         return "default-bg";
     }
   };
+  function handleLogout() {
+    localStorage.removeItem("weatherapp-loggedin");
+    navigate("/login");
+  }
 
   return (
     <>
       <nav className="navbar">
-        <div className="nav-logo">WeatherApp</div>
-        <ul className="nav-links">
-          <li>
-            Home
-          </li>
-          <li>
-            <Link to="/about" className="nav-item">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="nav-item">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
+  <div className="nav-logo">WeatherApp</div>
+  <ul className="nav-links">
+    <li>
+      <Link to="/"><button>Home</button></Link>
+    </li>
+    <li>
+      <Link to="/about"><button>About</button></Link>
+    </li>
+    <li>
+      <Link to="/contact"><button>Contact</button></Link>
+    </li>
+    <li>
+      {localStorage.getItem("weatherapp-loggedin") === "yes" ? (
+        <button onClick={handleLogout}>Logout</button>
+      ) : (
+        <>
+          <Link to="/login"><button>Login</button></Link>
+          <Link to="/signup"><button>Sign Up</button></Link>
+        </>
+      )}
+    </li>
+  </ul>
+</nav>
       <div className={`container ${getBackgroundClass()}`}>
         <div className="weather-app">
           <div className="search">
